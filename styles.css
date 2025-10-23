@@ -1,0 +1,164 @@
+/* ====== BASE GLOBAL ====== */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 16px;
+    font-family: 'Poppins', system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+    background-color: #fff8e1; /* Amarillo muy suave */
+    color: #2b2b2b;
+}
+
+/* ====== ENCABEZADOS ====== */
+h1 {
+    color: #c8102e; /* Rojo principal */
+    border-bottom: 4px solid #ffcc00; /* Amarillo brillante */
+    text-align: center;
+    padding-bottom: 8px;
+    text-shadow: 1px 1px 3px rgba(200, 16, 46, 0.3);
+}
+
+h2 {
+    color: #a50f24; /* Rojo intenso */
+}
+
+h3 {
+    color: #c8102e; /* Mantiene la identidad principal */
+}
+
+/* ====== TEXTO ====== */
+p {
+    font-size: 18px;
+    color: #333333;
+}
+
+li {
+    color: #a50f24;
+}
+
+/* ====== TABLAS ====== */
+th {
+    color: #fff8e1; /* Texto claro */
+    background-color: #c8102e; /* Fondo rojo */
+}
+
+td {
+    color: #2b2b2b;
+}
+
+/* ====== ENLACES ====== */
+a {
+    color: #c8102e;
+    border-bottom: 2px solid currentColor;
+    text-decoration: none;
+    transition: color 0.3s ease-in-out, border-color 0.3s ease-in-out;
+}
+
+a:hover {
+    color: #ffcc00;
+    border-color: #ffcc00;
+}
+
+/* ====== BOTONES ====== */
+.btn-primary {
+    background-color: #c8102e;
+    border-color: #c8102e;
+}
+.btn-primary:hover {
+    background-color: #a50f24;
+    border-color: #a50f24;
+}
+
+.btn-outline-primary {
+    color: #c8102e;
+    border-color: #c8102e;
+}
+.btn-outline-primary:hover {
+    background-color: #c8102e;
+    color: white;
+}
+
+/* ====== ALERTAS ====== */
+.alert-info {
+    background-color: #fff4cc; /* Amarillo muy suave */
+    border-left: 5px solid #ffcc00;
+    color: #2b2b2b;
+}
+
+/* ====== CARDS ====== */
+.card {
+    border-color: #ffe066; /* Borde amarillo suave */
+}
+.card-header {
+    background-color: #c8102e;
+    color: white;
+}
+
+/* ====== TESTIMONIOS ====== */
+.testimonial {
+    border-left: 4px solid #c8102e;
+    padding-left: 12px;
+    margin-bottom: 1.2rem;
+    background-color: #fff7e0;
+}
+
+/* ====== FOOTER ====== */
+footer {
+    background-color: #2b2b2b;
+    color: #fff8e1;
+}
+footer a {
+    color: #fff8e1;
+    font-size: 1.5rem;
+    margin: 0 8px;
+    transition: color 0.3s ease;
+}
+footer a:hover {
+    color: #ffcc00;
+}
+
+/* ====== BOTÓN FLOTANTE WHATSAPP ====== */
+.whatsapp-float {
+    position: fixed;
+    width: 60px;
+    height: 60px;
+    bottom: 20px;
+    right: 20px;
+    background-color: #25d366;
+    color: #fff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.25);
+    z-index: 1055;
+    text-decoration: none;
+    transition: transform 0.2s ease, background-color 0.3s ease, color 0.3s ease, opacity 0.2s ease;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(8px);
+    pointer-events: none;
+}
+.whatsapp-float.show {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+    pointer-events: auto;
+}
+.whatsapp-float:hover {
+    background-color: #20b954; /* Cambia color al pasar cursor */
+    color: #fff; /* Icono */
+    transform: scale(1.08);
+}
+
+/* ====== RESPONSIVE ====== */
+@media (max-width: 575.98px) {
+    footer { padding-bottom: 84px; }
+}
+
+/* ====== ACCESIBILIDAD ====== */
+@media (prefers-reduced-motion: reduce) {
+    .whatsapp-float { transition: none; }
+}
